@@ -7,6 +7,9 @@ import soilReducer from './slices/soilSlice';
 import farmAnalyticsReducer from './slices/farmAnalyticsSlice';
 import locationReducer from './slices/locationSlice';
 import messageReducer from './slices/messageSlice';
+import communityReducer from './slices/communitySlice';
+import chatbotReducer from './slices/chatbotSlice';
+import schemeReducer from './slices/schemeSlice';
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +21,9 @@ export const store = configureStore({
     farmAnalytics: farmAnalyticsReducer,
     location: locationReducer,
     message: messageReducer,
+    community: communityReducer,
+    chatbot: chatbotReducer,
+    scheme: schemeReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

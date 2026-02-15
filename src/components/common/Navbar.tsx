@@ -8,6 +8,9 @@ const Navbar = () => {
     { path: '/dashboard', label: 'Dashboard', icon: '📊' },
     { path: '/crop-management', label: 'Crops', icon: '🌾' },
     { path: '/market-insights', label: 'Market', icon: '💰' },
+    { path: '/community', label: 'Community', icon: '👥' },
+    { path: '/chatbot', label: 'AI Assistant', icon: '🤖' },
+    { path: '/schemes', label: 'Schemes', icon: '🏛️' },
     { path: '/resources', label: 'Learn', icon: '📚' },
     { path: '/profile', label: 'Profile', icon: '👨‍🌾' },
   ];

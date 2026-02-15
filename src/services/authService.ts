@@ -50,11 +50,18 @@ export const requestOtp = async (phone: string): Promise<OtpResponse> => {
 
 export const verifyOtp = async (phone: string, otp: string): Promise<AuthResponse> => {
   try {
-    const response = await api.post('/auth/verify-otp', { phone, otp });
+    const response = await api.post('/auth/verify-otp-login', { phone, otp });
     
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
+      
+      return {
+        success: true,
+        message: 'Login successful',
+        token: response.data.token,
+        user: response.data.user
+      };
     }
     
     return response.data;
